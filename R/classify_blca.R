@@ -91,9 +91,7 @@ classify_blca <- function(df,
       nearest_cor = .data$estimate[1],
       dist_to_sec = .data$nearest_cor - .data$estimate[2],
       delta_med = stats::median(.data$nearest_cor - .data$estimate),
-      sep_lvl = .data$dist_to_sec / .data$delta_med,
-      nearest = ifelse(.data$nearest_cor < .data$min_cor, NA_character_, .data$nearest),
-      sep_lvl = ifelse(.data$nearest_cor < .data$min_cor, NA_real_, .data$sep_lvl)
+      sep_lvl = .data$dist_to_sec / .data$delta_med
     ) |>
     dplyr::ungroup() |>
     dplyr::select(c("sample", "class", "estimate", "conf.low", "conf.high", "nearest", "statistic", "parameter", "sep_lvl")) |>
