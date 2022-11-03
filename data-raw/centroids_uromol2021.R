@@ -1,4 +1,3 @@
-## code to prepare `centroids_uromol2021` dataset goes here
 library(AnnotationDbi)
 library(EnsDb.Hsapiens.v86)
 library(org.Hs.eg.db)
